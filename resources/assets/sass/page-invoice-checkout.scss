@@ -1,0 +1,278 @@
+.invoice-checkout {
+  padding-top: 40px;
+  .top-line-content {
+    .title-header {
+      background: $lightGrey3;
+      border: 1px solid $borderColor;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 10px;
+      text-align: center;
+    }
+    .shipping-status {
+      .row {
+        margin: 0;
+        .item {
+          border: 1px solid $borderColor;
+          padding: 15px;
+          font-size: 12px;
+          float: none;
+          text-align: center;
+          .bold {
+            font-size: 14px;
+          }
+          span {
+            color: $lightGrey1;
+            font-size: 12px;
+            &.price-data {
+              font-size: 14px;
+              color: $mainColor2;
+              font-weight: bold;
+            }
+            &.unit {
+              font-size: 10px;
+              margin-right: 3px;
+              color: #AAB3B9;
+            }
+            &.status-0, &.status-4, &.status-5 {
+              color: #df5a42
+            }
+
+            &.status-1, &.status-6 {
+              color: #efbc57
+            }
+
+            &.status-2 {
+              color: #3c763d
+            }
+          }
+          &:first-child {
+            text-align: right;
+          }
+        }
+      }
+    }
+    .banks {
+      padding: 0;
+      display: block;
+      list-style: none;
+      text-align: right;
+      li {
+        padding: 10px 31px 10px 10px;
+        margin-left: 10px;
+        border: 1px solid $borderColor;
+        position: relative;
+        height: 80px;
+        display: inline-block;
+        width: 40%;
+        @include border-radius(4px);
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        input[type=radio] {
+          margin: 0;
+          top: 20px;
+          right: 22px;
+          visibility: hidden;
+          position: absolute;
+          &:checked ~ .radiobtn:before {
+            border-color: $mainColor2;
+          }
+          &:checked ~ .radiobtn:after {
+            background: $mainColor2;
+          }
+        }
+        .radiobtn {
+          overflow: hidden;
+
+          &:before {
+            content: '';
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            top: calc(50% - 10px);
+            right: 7px;
+            border: 1px solid $lightGrey1;
+            @include border-radius(50%)
+          }
+          &:after {
+            content: '';
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: $lightGrey1;
+            top: calc(50% - 8px);
+            right: 9px;
+            position: absolute;
+          }
+
+          img {
+            height: 60px;
+            width: auto;
+          }
+        }
+      }
+    }
+    .btn.download-pdf {
+      background: $mainColor2;
+      color: #ffffff;
+      font-weight: 500;
+      padding: 0 10px;
+      transition: all 0.5s;
+    }
+    .icon-title {
+      text-align: right;
+      margin: 15px 0;
+      i {
+        font-size: 20px;
+        margin-left: 8px;
+      }
+      span {
+        color: $grey;
+        font-size: 16px;
+      }
+    }
+    .payment-log {
+      text-align: center;
+      .payment-log-header {
+        background: $lightGrey3;
+        border: 1px solid $borderColor;
+        @media(min-width: 992px) {
+          display: flex;
+          justify-content: stretch;
+          align-items: stretch;
+        }
+        .col {
+          height: 50px;
+          line-height: 20px;
+          text-align: center;
+          font-weight: 500;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $grey;
+          padding: 0 10px;
+          &:not(:last-child) {
+            border-left: 1px solid $borderColor;
+          }
+          .unit {
+            font-size: 10px;
+            margin-right: 3px;
+            color: #AAB3B9;
+          }
+        }
+      }
+      .payment-log-row {
+        border: 1px solid $borderColor;
+        display: flex;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
+        .col {
+          text-align: center;
+          font-size: 14px;
+          color: $grey;
+          font-weight: 300;
+          line-height: 50px;
+          padding: 0 10px;
+          &:not(:last-child) {
+            border-left: 1px solid $borderColor;
+          }
+          span {
+            &.status-0, &.status-4, &.status-5 {
+              color: #df5a42
+            }
+
+            &.status-1, &.status-6 {
+              color: #efbc57
+            }
+
+            &.status-2 {
+              color: #3c763d
+            }
+          }
+        }
+        @media(max-width: 1999.98px) and (min-width: 992px) {
+          .col {
+            font-size: 12px;
+            padding: 0;
+          }
+        }
+        @media(max-width: 991.98px) {
+          margin-bottom: 30px;
+          border-bottom: 0;
+          .md-header {
+            background: $lightGrey3;
+            font-weight: 400;
+          }
+          .col {
+            border-bottom: 1px solid $borderColor;
+            &:not(.md-header) {
+              span.hidden-lg {
+                color: $txtGrey;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .goods {
+      margin-bottom: -1px;
+      text-align: center;
+      thead {
+        width: 100%;
+        text-align: center;
+        background: $lightGrey3;
+        td {
+          height: 45px;
+          line-height: 37px;
+          padding: 5px 10px;
+          font-weight: 500;
+          .unit {
+            font-size: 10px;
+            margin-right: 3px;
+            color: #AAB3B9;
+          }
+        }
+      }
+      .goods-item {
+        .goods-title {
+          text-align: right;
+          line-height: 35px;
+          white-space: nowrap;
+          a {
+            h5 {
+              margin: 0;
+              font-size: 14px;
+            }
+            .motto {
+              font-size: 12px;
+              text-align: right;
+              color: $txtColorLight;
+            }
+            &:hover, &:focus {
+              color: $mainColor2
+            }
+          }
+        }
+        td {
+          line-height: 50px;
+        }
+      }
+      tbody {
+        .goods-item:nth-child(2n) {
+          background: $lightGrey3;
+        }
+      }
+    }
+    .process {
+      margin-top: 30px;
+    }
+
+    @media(max-width: 991.98px) {
+      .btn {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

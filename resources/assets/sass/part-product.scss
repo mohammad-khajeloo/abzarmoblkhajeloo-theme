@@ -1,0 +1,999 @@
+.product-item-loading,
+.product-item {
+  text-align: right;
+  margin-bottom: 30px;
+  background: #fff;
+  border: 1px solid $borderColorLight;
+  min-width: 200px;
+  @include box-shadow(0, 0, 5px, $borderColor);
+  @include transition(all, 0.2s);
+
+  .product-pic {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+
+      &.img-main {
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        @include transition(opacity, 200ms);
+      }
+
+      &.img-secondary {
+        z-index: 1;
+      }
+    }
+
+    .ribbon {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: $selectedRatingStar;
+      font-size: 11px;
+      color: #fff;
+      padding: 0 10px;
+      line-height: 20px;
+      @include border-radius(10px);
+      z-index: 2;
+    }
+
+    .ribbon-delivery {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: $success-color-1;
+      font-size: 11px;
+      color: #fff;
+      padding: 0 10px;
+      line-height: 20px;
+      @include border-radius(13px);
+      z-index: 2;
+      .icon{
+        position: relative;
+        width:27px;
+        height:25px;
+        object-fit: contain;
+        margin-right: -2px;
+        margin-left: 3px;
+      }
+      @media(max-width:575.98px){
+        top: 0;
+        right: 0;
+        font-size: 10px;
+        padding: 0 7px;
+        white-space: nowrap;
+        .icon {
+          width: 22px;
+          margin-left: 0;
+        }
+      }
+    }
+
+    .btn.add-basket {
+      padding: 0;
+      position: absolute;
+      bottom: -50px;
+      right: 40px;
+      z-index: 2;
+      width: calc(100% - 80px);
+      @include transition(all, 0.5s);
+
+      .btn-add-basket-text {
+        height: 36px;
+        line-height: 36px;
+        padding: 0 20px 0 40px;
+        background: $mainColor1;
+        color: $txtColor;
+        margin-top: 2px;
+        @include border-radius(18px);
+        font-size: 13px;
+      }
+
+      .btn-add-basket-icon {
+        width: 40px;
+        line-height: 40px;
+        height: 40px;
+        background: #fff;
+        text-align: center;
+        @include border-radius(20px);
+        position: absolute;
+        top: 0;
+        left: -15px;
+        @include box-shadow(2px, -2px, 21px, rgba(45, 48, 51, 0.45));
+
+        img {
+          width: 18px;
+          height: auto;
+          position: relative;
+        }
+      }
+
+      @media(max-width: 1440px) and (min-width: 1360px) {
+        width: calc(100% - 60px);
+        .btn-add-basket-text {
+          font-size: 11px !important;
+        }
+      }
+    }
+
+    .btn.quick-view {
+      padding: 0;
+      position: absolute;
+      bottom: -50px;
+      left: 10px;
+      z-index: 2;
+      @include transition(all, 0.5s);
+      transition-delay: 0.1s;
+
+      .btn-add-basket-icon {
+        width: 40px;
+        line-height: 40px;
+        height: 40px;
+        background: $selectedRatingStar;
+        text-align: center;
+        @include border-radius(20px);
+        /*position: absolute;
+        top: 0;
+        left: -15px;*/
+        @include box-shadow(2px, -2px, 21px, rgba(45, 48, 51, 0.45));
+
+        img {
+          width: 18px;
+          height: auto;
+          position: relative;
+        }
+      }
+    }
+
+    .btn.add-need-list {
+      padding: 0;
+      position: absolute;
+      bottom: -50px;
+      right: 40px;
+      z-index: 2;
+      width: calc(100% - 80px);
+      @include transition(all, 0.5s);
+
+      .btn-add-basket-text {
+        height: 36px;
+        line-height: 36px;
+        padding: 0 20px 0 40px;
+        background: $mainColor2;
+        color: #fff;
+        margin-top: 2px;
+        @include border-radius(18px);
+        font-size: 13px;
+      }
+
+      .btn-add-basket-icon {
+        width: 40px;
+        line-height: 40px;
+        height: 40px;
+        background: #fff;
+        text-align: center;
+        @include border-radius(20px);
+        position: absolute;
+        top: 0;
+        left: -15px;
+        @include box-shadow(2px, -2px, 21px, rgba(45, 48, 51, 0.45));
+
+        img {
+          width: 18px;
+          height: auto;
+          position: relative;
+        }
+      }
+
+      @media(max-width: 1440px) and (min-width: 1360px) {
+        width: calc(100% - 60px);
+        .btn-add-basket-text {
+          font-size: 11px !important;
+        }
+      }
+    }
+
+    .product-notice {
+      background: rgba(255, 255, 255, .7);
+      color: red;
+      position: absolute;
+      font-size: 11px;
+      line-height: 16px;
+      z-index: 1;
+      right: 0;
+      width: 100%;
+      bottom: -50px;
+      padding: 0 15px;
+      @include transition(all, 0.7s);
+
+      i {
+        margin-left: 3px;
+      }
+    }
+
+    @media(max-width: 575.98px) {
+      overflow: visible;
+      .btn {
+        bottom: 0 !important;
+      }
+      .product-notice {
+        bottom: 0;
+        z-index: 3;
+        padding: 0;
+        font-size: 8px;
+      }
+    }
+  }
+
+  div[class^="counter-box"] {
+    padding: 0;
+    position: absolute;
+    bottom: -50px;
+    right: calc(50% - 50px);
+    z-index: 2;
+    width: 100px;
+    opacity: 0.9;
+    @include transition(all, 0.5s);
+
+    .count-group {
+      margin: 0;
+
+      .count-control {
+        margin: 0;
+        height: 36px;
+        line-height: 34px;
+        text-align: center;
+        color: $txtColor;
+        border-width: 1px;
+        padding-left: 46px;
+      }
+
+      .count-increase, .count-decrease {
+        width: 40px;
+        left: 1px;
+        font-weight: normal;
+        line-height: 17px;
+        cursor: pointer;
+        @include transition(all, 0.3s);
+        color: #fff;
+        background: $mainColor1;
+
+        &:hover {
+          background: $mainColor2;
+          color: #fff;
+        }
+      }
+
+      .count-increase {
+        height: 17px;
+        top: 1px;
+      }
+
+      .count-decrease {
+        height: 16px;
+        top: 19px;
+        font-size: 20px;
+      }
+    }
+
+    &:not(.d-none) {
+      bottom: 15px;
+    }
+  }
+
+  .product-title {
+    font-size: 13px;
+    color: $txtColor;
+    font-weight: 500;
+    overflow: hidden;
+    padding: 0 15px;
+    height: 55px;
+    @include flex();
+    align-items: center;
+  }
+
+  .product-footer {
+    @include flex();
+    justify-content: space-between;
+    border-top: 1px solid $borderColorLight;
+    padding: 10px;
+    align-items: center;
+    overflow: hidden;
+
+    .product-price {
+      color: $txtColor;
+      font-size: 11px;
+      white-space: nowrap;
+
+      .price-data {
+        color: $accentColor;
+        font-size: 17px;
+        font-weight: 500;
+      }
+
+      .discount {
+        font-size: 13px;
+        padding-left: 3px;
+        position: relative;
+        color: $txtGrey;
+
+        &:after {
+          content: '';
+          width: 33px;
+          height: 2px;
+          background: #fda4a6;
+          position: absolute;
+          right: 0;
+          top: 8px;
+          transform: rotate(-15deg);
+        }
+      }
+    }
+
+    .rating-value {
+      color: $txtColorLight;
+      font-size: 12px;
+      padding: 0;
+      line-height: 30px;
+      direction: ltr;
+      @include border-radius(3px);
+      white-space: nowrap;
+
+      i {
+        margin-right: 2px;
+        color: $selectedRatingStar;
+      }
+    }
+
+    /*.rating {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      direction: ltr;
+      li {
+        display: inline-block;
+        margin: 0 1px;
+        i {
+          color: $txtColorLight;
+          &.fa-star{
+            color:$selectedRatingStar;
+          }
+        }
+      }
+    }*/
+    @media(max-width: 575.98px) {
+      &.hidden-xs {
+        display: none !important;
+      }
+    }
+  }
+
+  .not-available {
+    color: $error-color-1;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .call {
+    color: $accentColor;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &.active {
+    .not-available {
+      display: none;
+    }
+
+    .btn.add-need-list {
+      display: none;
+    }
+  }
+
+  &.not-active {
+    .price {
+      display: none;
+    }
+
+    .add-basket {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .product-pic {
+      img {
+        &.img-main {
+          opacity: 0 !important;
+        }
+      }
+
+      .btn.add-basket {
+        bottom: 20px;
+      }
+
+      .btn.quick-view {
+        bottom: 20px;
+      }
+
+      .btn.add-need-list {
+        bottom: 20px;
+      }
+
+      .product-notice {
+        bottom: 0;
+      }
+    }
+  }
+
+  @media(max-width: 1660px) {
+    .product-pic {
+      .btn.add-basket {
+        .btn-add-basket-icon {
+          left: -7px;
+        }
+
+        .btn-add-basket-text {
+          padding-right: 12px;
+        }
+      }
+    }
+  }
+  @media(max-width: 1540px) and (min-width: 1360px) {
+    .product-pic {
+      .btn.add-basket {
+        right: 2px;
+
+        .btn-add-basket-text {
+          font-size: 12px;
+        }
+      }
+
+      .btn.add-need-list {
+        right: 2px !important;
+
+        .btn-add-basket-icon {
+          left: -4px;
+        }
+      }
+
+      .btn.quick-view {
+        left: 2px;
+      }
+    }
+  }
+
+
+  @media(max-width: 575.98px) {
+    display: flex;
+    justify-content: stretch;
+    margin-bottom: 15px;
+    padding: 10px;
+    min-width: 260px;
+    @include border-radius(3px);
+    border: 1px solid $borderColor;
+    .product-pic {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+    .product-title {
+      margin: 0 0 10px;
+      min-height: inherit;
+      padding: 0 0 0 35px;
+      white-space: inherit;
+
+      &.hidden-xs {
+        display: none !important;
+      }
+    }
+    .product-footer {
+      &.hidden-xs {
+        display: none !important;
+      }
+    }
+    .pd-item-md-details {
+      flex: 0 0 70%;
+      max-width: 70%;
+      padding-right: 15px;
+      text-align: right;
+      position: relative;
+
+      .ribbon {
+        display: inline-block;
+        background: $selectedRatingStar;
+        font-size: 11px;
+        color: #fff;
+        padding: 0 10px;
+        line-height: 20px;
+        @include border-radius(10px);
+      }
+
+      .rating-value {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $txtColorLight;
+        font-size: 12px;
+        background: $tableHeaderColor;
+        padding: 0 5px;
+        line-height: 40px;
+        width: 40px;
+        @include border-radius(3px);
+        white-space: nowrap;
+
+        i {
+          margin-right: 2px;
+        }
+      }
+
+      .product-price {
+        color: $txtColor;
+        font-size: 11px;
+        padding-left: 70px;
+
+        .price-data {
+          color: $accentColor;
+          font-size: 17px;
+          font-weight: 500;
+        }
+
+        .discount {
+          font-size: 13px;
+          padding-left: 3px;
+          position: relative;
+          color: $txtGrey;
+
+          &:after {
+            content: '';
+            width: 33px;
+            height: 2px;
+            background: #fda4a6;
+            position: absolute;
+            right: 0;
+            top: 8px;
+            transform: rotate(-15deg);
+          }
+        }
+      }
+
+      .btn {
+        border: 1px solid $mainColor1;
+        @include border-radius(3px);
+        position: absolute;
+        left: 0;
+        right: inherit;
+        bottom: 0;
+        width: 40px;
+        padding: 0;
+
+        i {
+          color: $mainColor1;
+          font-size: 20px;
+          line-height: 40px;
+        }
+
+        .btn-add-basket-text {
+          display: none;
+        }
+
+        .btn-add-basket-icon {
+          img {
+            display: none
+          }
+
+          &:before {
+            content: "\f217";
+            font-family: FontAwesome;
+            color: $mainColor1;
+            font-size: 20px;
+            line-height: 40px;
+          }
+        }
+
+
+        &.add-need-list {
+          color: $mainColor2;
+          border-color: $mainColor2;
+
+          i {
+            color: $mainColor2;
+          }
+        }
+
+        &.btn-call {
+          color: $accentColor;
+          border-color: $accentColor;
+
+          i {
+            color: $accentColor;
+          }
+        }
+
+        &:hover, &:focus {
+          i {
+            color: #fff;
+          }
+        }
+      }
+      div[class^="counter-box"] {
+        right: inherit;
+        left: 0;
+        width: 70px;
+        .count-group {.count-increase, .count-decrease{
+          width:30px;
+        }}
+      }
+
+    }
+  }
+}
+
+#product-quick-view {
+  .modal-dialog {
+    max-width: 90%;
+    width: 992px;
+
+    .modal-content {
+      padding: 30px;
+
+      .btn.cancel {
+        background: none;
+        position: absolute;
+        left: 9px;
+        font-size: 20px;
+        top: 4px;
+        padding: 0;
+        color: $lightGrey2;
+      }
+
+      .header {
+        margin-bottom: 30px;
+
+        .pg-title {
+          text-align: right;
+          font-size: 22px;
+          font-weight: 500;
+          margin-bottom: 10px;
+          color: $txtColor;
+        }
+
+        .product-code {
+          @include flex();
+
+          .title {
+            color: $lightGrey1;
+            margin-left: 5px;
+            font-size: 14px;
+          }
+
+          span {
+            font-size: 14px;
+            color: $txtColor;
+          }
+
+          @media(min-width: 768px) {
+            justify-content: flex-start;
+          }
+          @media (max-width: 767.98px) {
+            justify-content: center;
+            border-top: 1px solid $borderColor;
+            padding-top: 15px;
+            margin: 15px -15px 0;
+            span, .title {
+              color: $grey;
+            }
+          }
+        }
+      }
+
+      .title-wrapper {
+        margin: 15px 0 0;
+        padding-right: 60px;
+
+        .title {
+          font-size: 16px;
+
+          &:before {
+            background: $mainColor1;
+          }
+
+          &:after {
+            content: none;
+          }
+        }
+      }
+
+      .product-property-wrapper {
+        margin-bottom: 45px;
+        max-height: 245px;
+        overflow-y: hidden;
+
+        .product-property {
+          font-size: 14px;
+
+          .property-title {
+            display: inline-block;
+            color: $lightGrey1;
+            position: relative;
+            line-height: 20px;
+
+            &:after {
+              content: "\f104";
+              font-family: FontAwesome;
+              color: $accentColor;
+              vertical-align: middle;
+              margin: 0 5px;
+            }
+          }
+
+          .property-value {
+            color: $txtColor;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .footer {
+        .price {
+          margin-bottom: 15px;
+
+          .price-title {
+            color: $txtColor;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            line-height: 30px;
+            display: inline-block;
+
+            &:after {
+              content: "\f104";
+              font-family: FontAwesome;
+              vertical-align: middle;
+              margin: 0 15px;
+              color: $mainColor1;
+              line-height: 30px;
+              font-size: 22px;
+            }
+          }
+
+          span:not(.price-data) {
+            font-size: 14px;
+            color: $grey;
+            margin-left: 15px;
+            font-weight: 400;
+          }
+
+          &.mb-show {
+            span:not(.price-data) {
+              margin-left: 0;
+            }
+          }
+
+          @media(min-width: 770px) {
+            &.has-discount {
+              @include flex();
+            }
+          }
+
+          .value {
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 30px;
+            color: $accentColor;
+            display: inline-block;
+
+            .discount {
+              margin-bottom: 10px;
+              font-weight: 200;
+              font-size: 22px;
+              position: relative;
+              opacity: 0.7;
+
+              &:after {
+                content: '';
+                width: 65px;
+                height: 2px;
+                background: #fda4a6;
+                position: absolute;
+                right: 0;
+                top: 13px;
+                -webkit-transform: rotate(-15deg);
+                -moz-transform: rotate(-15deg);
+                -ms-transform: rotate(-15deg);
+                -o-transform: rotate(-15deg);
+                transform: rotate(-15deg);
+              }
+
+              del {
+                text-decoration: inherit;
+              }
+
+              span {
+                color: $grey !important;
+                margin-right: 15px;
+              }
+            }
+          }
+
+          .not-available {
+            color: $error-color-1;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: inline-block;
+          }
+        }
+
+        .btn {
+          height: 54px;
+
+          &.add-basket {
+            margin-bottom: 40px;
+            padding: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            max-width: 250px;
+            @include transition(all, 0.5s);
+
+            .btn-add-basket-text {
+              height: 50px;
+              line-height: 50px;
+              padding: 0 20px 0 50px;
+              background: $mainColor1;
+              color: $txtColor;
+              margin-top: 2px;
+              @include border-radius(25px);
+              font-size: 15px;
+              font-weight: 400;
+            }
+
+            .btn-add-basket-icon {
+              width: 54px;
+              line-height: 54px;
+              height: 54px;
+              background: #fff;
+              text-align: center;
+              @include border-radius(27px);
+              position: absolute;
+              top: 0;
+              left: -15px;
+              @include box-shadow(2px, -2px, 21px, rgba(45, 48, 51, 0.45));
+
+              img {
+                width: 18px;
+                height: auto;
+                position: relative;
+              }
+            }
+          }
+
+          &.add-need-list {
+            padding: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            max-width: 250px;
+            @include transition(all, 0.5s);
+
+            .btn-add-basket-text {
+              height: 50px;
+              line-height: 50px;
+              padding: 0 20px 0 40px;
+              background: $mainColor2;
+              color: #fff;
+              margin-top: 2px;
+              @include border-radius(25px);
+              font-size: 13px;
+            }
+
+            .btn-add-basket-icon {
+              width: 54px;
+              line-height: 54px;
+              height: 54px;
+              background: #fff;
+              text-align: center;
+              @include border-radius(27px);
+              position: absolute;
+              top: 0;
+              left: -15px;
+              @include box-shadow(2px, -2px, 21px, rgba(45, 48, 51, 0.45));
+
+              img {
+                width: 18px;
+                height: auto;
+                position: relative;
+              }
+            }
+          }
+        }
+      }
+
+      .btn.btn-details {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: auto;
+        font-size: 16px;
+        @include transition(all, 0.3s);
+
+        i {
+          font-size: 24px;
+          margin-right: 10px;
+          vertical-align: middle;
+          color: $lightGrey1;
+        }
+
+        &:hover {
+          color: $mainColor1;
+        }
+      }
+
+      .counter-box-modal {
+        width: 170px;
+
+        .count-group {
+          .count-control {
+            border-width: 1px;
+            text-align: center;
+            color: $txtColor;
+          }
+
+          .count-increase, .count-decrease {
+            left: 1px;
+            font-size: 22px;
+            line-height: 27px;
+            cursor: pointer;
+            @include transition(all, 0.3s);
+            background: $mainColor1;
+            color: $mainColor2;
+
+            &:hover {
+              background: $mainColor2;
+              color: $mainColor1;
+            }
+          }
+
+          .count-increase {
+            top: 1px;
+          }
+
+          .count-decrease {
+            top: 26px;
+            font-size: 30px;
+          }
+        }
+      }
+
+      &.active {
+        #product-modal-add-to-need-list {
+          display: none;
+        }
+
+        .footer .price .not-available {
+          display: none;
+        }
+      }
+
+      &.not-active {
+        #product-modal-add-to-cart {
+          display: none;
+        }
+
+        .footer .price .value {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

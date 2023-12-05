@@ -1,0 +1,13 @@
+.idea
+node_modules
+.sass-cache
+npm-*
+resources/assets/css/compiled_sass/*
+/vendor/
+composer.lock
+public/view-cache
+/public/HCMS-assets/css/app*.*
+/public/HCMS-assets/css/vendor*.*
+/public/HCMS-assets/js/all*.*
+/mix-manifest.json
+.envrc

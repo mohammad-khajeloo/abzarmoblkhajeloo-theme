@@ -1,0 +1,37 @@
+.authenticate {
+  padding-top: 40px;
+  @include flex();
+  flex-direction: column;
+  align-items: center;
+  .top-line-content {
+    padding:30px;
+  }
+  .extra-link-container{
+    text-align: right;
+    margin-bottom:5px;
+    max-width: 100%;
+    @include flex();
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .extra-link{
+      color:$iconGrey;
+      font-weight: 500;
+      font-size:14px;
+      &:hover{
+        color:$mainColor2;
+      }
+      @media(max-width:767.98px){
+        width:100%;
+        text-align: center;
+        font-size:12px;
+        line-height: 25px;
+        &:first-child{
+          margin-top:15px;
+        }
+      }
+    }
+    @media(min-width: 768px) {
+      min-width: 570px;
+    }
+  }
+}

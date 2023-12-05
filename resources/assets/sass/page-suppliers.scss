@@ -1,0 +1,68 @@
+.suppliers {
+  padding-top: 40px;
+  text-align: center;
+
+  .top-line-content {
+    .icon-title {
+      text-align: right;
+      margin:30px 0 15px;
+      i{
+        font-size:26px;
+      }
+      span {
+        font-size: 16px;
+      }
+      &:first-child{
+        margin-top:0;
+      }
+    }
+  }
+
+  .birth-date {
+    @include flex();
+    justify-content: stretch;
+    flex-wrap: wrap;
+
+    .form-control {
+      width: auto;
+      flex-grow: 1;
+      margin: 0;
+    }
+  }
+
+  .checkbox-lb {
+    margin-bottom: 50px;
+  }
+
+  .office-location {
+    @include flex();
+    justify-content: stretch;
+    flex-wrap: wrap;
+
+    .form-group {
+      width: 49%;
+      display: inline-block;
+      vertical-align: top;
+      margin:0;
+
+      .fstToggleBtn {
+        padding: 0 15px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        background: $lightGrey3;
+        border-color: $borderColor;
+        @include border-radius(0);
+        box-shadow: none;
+        direction: rtl;
+        text-align: right;
+      }
+    }
+  }
+
+  .space {
+    hr {
+      margin: 15px 0 30px;
+    }
+  }
+}

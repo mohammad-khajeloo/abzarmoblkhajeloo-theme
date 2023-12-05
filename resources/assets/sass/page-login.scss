@@ -1,0 +1,28 @@
+.mobile-auth {
+  padding-top: 40px;
+  @include flex();
+  flex-direction: column;
+  align-items: center;
+  .top-line-content {
+    padding:30px;
+  }
+  .extra-link-container{
+    text-align: right;
+    margin-bottom:5px;
+    max-width: 100%;
+    .extra-link{
+      color:$iconGrey;
+      font-weight: 500;
+      font-size:14px;
+      &:hover{
+        color:$mainColor2;
+      }
+    }
+    @media(min-width: 768px) {
+      min-width: 570px;
+    }
+    @media(max-width: 767px) {
+      width: 100%;
+    }
+  }
+}

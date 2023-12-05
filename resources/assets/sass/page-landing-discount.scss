@@ -1,0 +1,185 @@
+.landing-discount {
+  .discount-slider {
+  }
+
+  .discount-categories {
+    @include flex();
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+
+    .cat-item {
+      display: block;
+      margin: 0 5px;
+      background: $mainColor1;
+      height: 40px;
+      line-height: 40px;
+
+      &:hover {
+        background: $mainColor1Medium;
+        color: #000;
+      }
+
+      @media(max-width: 767.98px) {
+        padding: 0 15px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .discount-products {
+    margin-top: 30px;
+
+    .product-item {
+      .product-pic {
+        .add-basket, .add-need-list {
+          width: auto;
+          left: 40px;
+          @media(max-width: 1540px) and (min-width: 1360px) {
+            left: 8px;
+          }
+        }
+      }
+
+      @media(max-width: 575.98px) {
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: stretch;
+        margin-bottom: 15px;
+        padding: 10px;
+        .product-pic {
+          flex: 0 0 30%;
+          max-width: 30%;
+
+          div[class^="counter-box"] {
+            right: calc(333.33% - 100px);
+          }
+        }
+        .product-title {
+          margin: 0 0 10px;
+          min-height: inherit;
+          padding: 0 0 0 35px;
+          white-space: inherit;
+
+          &.hidden-xs {
+            display: none !important;
+          }
+        }
+        .product-footer {
+          &.hidden-xs {
+            display: none !important;
+          }
+        }
+        .pd-item-md-details {
+          flex: 0 0 70%;
+          max-width: 70%;
+          padding-right: 15px;
+          text-align: right;
+          position: relative;
+
+          .ribbon {
+            display: inline-block;
+            background: $selectedRatingStar;
+            font-size: 11px;
+            color: #fff;
+            padding: 0 10px;
+            line-height: 20px;
+            @include border-radius(10px);
+          }
+
+          .rating-value {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $txtColorLight;
+            font-size: 12px;
+            background: $tableHeaderColor;
+            padding: 0 5px;
+            line-height: 40px;
+            width: 40px;
+            @include border-radius(3px);
+            white-space: nowrap;
+
+            i {
+              margin-right: 2px;
+            }
+          }
+
+          .product-price {
+            color: $txtColor;
+            font-size: 11px;
+
+            .price-data {
+              color: $accentColor;
+              font-size: 17px;
+              font-weight: 500;
+            }
+
+            .discount {
+              font-size: 13px;
+              padding-left: 3px;
+              position: relative;
+              color: $txtGrey;
+
+              &:after {
+                content: '';
+                width: 33px;
+                height: 2px;
+                background: #fda4a6;
+                position: absolute;
+                right: 0;
+                top: 8px;
+                transform: rotate(-15deg);
+              }
+            }
+          }
+
+          .btn {
+            border: 1px solid $mainColor1;
+            @include border-radius(3px);
+            position: absolute;
+            left: 0;
+            right: inherit;
+            bottom: 0;
+            width: 40px;
+            padding: 0;
+
+            i {
+              color: $mainColor1;
+              font-size: 20px;
+              line-height: 40px;
+            }
+
+
+            &.add-need-list {
+              color: $mainColor2;
+              border-color: $mainColor2;
+
+              i {
+                color: $mainColor2;
+              }
+            }
+
+            &.btn-call {
+              color: $accentColor;
+              border-color: $accentColor;
+
+              i {
+                color: $accentColor;
+              }
+            }
+
+            &:hover, &:focus {
+              i {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

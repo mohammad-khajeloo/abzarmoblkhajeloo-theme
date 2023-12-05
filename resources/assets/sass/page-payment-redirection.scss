@@ -1,0 +1,24 @@
+.payment-redirection {
+  padding-top: 40px;
+  @include flex();
+  flex-direction: column;
+  align-items: center;
+  .top-line-content {
+    padding:30px;
+    text-align: center;
+    font-size:18px;
+    line-height: 30px;
+    color:$txtColor;
+    .bg-success{
+      background-color: rgba(0, 191, 32, 0.25) !important;
+    }
+    .bg-danger{
+      background-color: rgba(191, 0, 7, 0.15) !important;
+    }
+    @media(min-width:768px){
+      .bg-success,.bg-danger{
+        padding:30px !important;
+      }
+    }
+  }
+}

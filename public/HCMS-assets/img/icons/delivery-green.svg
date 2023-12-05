@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499.62 282.29">
+    <style>
+        .cls-2{fill:none;stroke:#339e48;stroke-linecap:round;stroke-linejoin:round;stroke-width:16px;}
+    </style>
+    <path class="cls-2"
+          d="M403.24,240.65c38.46-5,75.54-36.83,85.74-75.41,11.11-42-13.85-76.05-55.75-76.07H379.55M84.6,8H369.36l-62,233.31h30.29"/>
+    <circle class="cls-2" cx="369.27" cy="242.71" r="31.58"/>
+    <circle class="cls-2" cx="154.33" cy="242.71" r="31.58"/>
+    <line class="cls-2" x1="122.75" y1="242.55" x2="96.09" y2="242.71"/>
+    <line class="cls-2" x1="325.11" y1="241.31" x2="185.91" y2="242.16"/>
+    <line class="cls-2" x1="229.36" y1="174.73" x2="8" y2="174.73"/>
+    <line class="cls-2" x1="135.91" y1="124.66" x2="33.28" y2="124.66"/>
+    <line class="cls-2" x1="107.38" y1="74.59" x2="61.81" y2="74.59"/>
+</svg>

@@ -1,0 +1,316 @@
+.invoice-shipment {
+  padding-top: 40px;
+
+  .icon-title {
+    text-align: right;
+    margin-bottom: 30px;
+
+    span {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    i {
+      font-size: 18px;
+      vertical-align: middle;
+    }
+  }
+
+  .address {
+    text-align: right;
+    direction: rtl;
+    color: $grey;
+    font-size: 14px;
+    margin-bottom: 30px;
+    border: 1px solid $borderColor;
+
+    .address-header {
+      @include flex();
+      justify-content: stretch;
+      align-items: stretch;
+      background: $btnColor;
+      border-bottom: 1px solid $borderColor;
+
+      .address-title {
+        flex-grow: 1;
+        padding: 0 15px;
+        line-height: 50px;
+      }
+    }
+
+    .address-button {
+      width: 50px;
+      height: 50px;
+      font-size: 16px;
+
+      a {
+        padding: 0;
+        text-align: center;
+        line-height: 50px;
+        color: $mainColor2;
+        display: block;
+        @include transition(all, 0.3s);
+
+        &:hover, &:focus {
+          color: $mainColor1;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .address-body {
+      @include flex();
+      justify-content: stretch;
+      align-items: stretch;
+
+      .address-content {
+        flex-grow: 1;
+        padding: 15px;
+        line-height: 32px;
+        max-width: calc(100% - 50px);
+
+        span:not(.numerical-data) {
+          color: $lightGrey1;
+        }
+      }
+
+      .address-button {
+        height: auto;
+        border-right: 1px solid $borderColor;
+      }
+    }
+
+    .address-footer {
+      padding: 0 15px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 50px;
+      border: 1px solid $borderColor;
+      background: $btnColor;
+      color: $grey;
+      margin: 0;
+
+      .radio-group {
+        margin: 0;
+
+        .radiobtn {
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+
+  .shipping {
+    @include flex();
+    align-items: stretch;
+    justify-content: stretch;
+    border: 1px solid $borderColor;
+    margin-bottom: 30px;
+
+    .shipping-radio {
+      background: $btnColor;
+      border-left: 1px solid $borderColor;
+      margin: 0;
+      padding: 0 12px;
+
+      .radio {
+        height: 100%;
+
+        .radio-group {
+          margin: 0;
+          height: 100%;
+
+          .radiobtn {
+            width: 16px;
+          }
+        }
+      }
+    }
+
+    .shipping-content {
+      border-left: 1px solid $borderColor;
+      flex-grow: 1;
+      padding: 15px;
+      text-align: right;
+
+      h4 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .desc {
+        font-size: 12px;
+        margin-top: 10px;
+      }
+    }
+
+    .shipping-value {
+      padding: 15px;
+      font-size: 14px;
+      background: $btnColor;
+      color: $mainColor1;
+      font-weight: 500;
+
+      .ttl {
+        color: $grey;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .legal-invoice {
+    margin-bottom: 30px;
+
+    .radio {
+      .radio-group {
+        display: block;
+        margin: 0 0 10px 0;
+      }
+    }
+
+    .alert {
+      a {
+        font-weight: bold;
+        color: $mainColor1;
+      }
+    }
+  }
+
+  .shipping-text{
+    font-size:14px;
+    text-align: right;
+    margin:-20px 0 30px;
+  }
+
+  .shipping-time {
+    .swiper-slide{
+      @media(min-width: 992px) {
+        width: auto;
+      }
+      @media(max-width: 991.98px) {
+        padding:0 35px;
+      }
+    }
+    .nav-tabs{
+      padding:0;
+      flex-wrap: nowrap;
+      overflow-x:auto;
+      overflow-y:hidden;
+      .nav-link{
+        font-weight: bold;
+        white-space: nowrap;
+        &.active{
+          color:$mainColor1;
+        }
+      }
+    }
+    .tab-pane{
+      padding-top:30px;
+    }
+    .day{
+      text-align: right;
+      font-weight: bold;
+      margin:0 0 10px;
+    }
+    .time-list{
+      @include flex();
+      padding:0;
+      list-style: none;
+      li{
+        .radiobtn{
+          padding:3px 20px 0;
+          border:1px solid $lightGrey2;
+          white-space: nowrap;
+          line-height: 40px;
+          color:$iconGrey;
+          cursor: pointer;
+          margin: 0;
+          @include transition(all,.5s);
+          span:first-child{
+            padding-right: 0;
+          }
+          &:before,&:after{
+            content:none;
+          }
+          &:hover{
+            background: $bodyBackground;
+          }
+        }
+        .radio-group{
+          margin:0;
+        }
+        input[type=radio]:checked ~ .radiobtn{
+          border-color:$mainColor2;
+        }
+        &:first-child .radiobtn{
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        &:last-child .radiobtn{
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+      }
+      @media(max-width: 991.98px){
+        flex-wrap: wrap;
+        li {
+          margin-bottom: 0;
+          .radiobtn {
+            padding:3px 10px 0;
+            line-height: 30px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+          }
+          &:first-child .radiobtn{
+            border-top-right-radius: 0;
+            border-bottom-right-radius:0;
+          }
+          &:last-child .radiobtn{
+            border-top-left-radius: 0;
+            border-bottom-left-radius:0;
+          }
+        }
+      }
+    }
+    .swiper-button-next, .swiper-button-prev{
+      background: #fff;
+      top: 18px;
+      width: 30px;
+      height: 80px;
+      color:$iconGrey;
+      font-size: 35px;
+      line-height: 80px;
+      &.swiper-button-disabled{
+        opacity: 0;
+      }
+      &:not(.swiper-button-disabled){
+        opacity:.8;
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+    .swiper-button-next{
+      left:-1px;
+      border-right:1px solid $borderColorLight;
+    }
+    .swiper-button-prev{
+      right:-1px;
+      border-left:1px solid $borderColorLight;
+    }
+  }
+
+  .button-wrapper {
+    @include flex();
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 0;
+    flex-wrap: wrap;
+    @media(max-width: 575.98px) {
+      .btn {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

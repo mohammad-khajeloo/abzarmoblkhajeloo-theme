@@ -1,0 +1,15 @@
+User-agent: *
+Disallow:
+
+
+User-agent: Googlebot
+Disallow:/product/1105/small-wares/counter-and-salon/decorative-items/Frames
+Disallow:/small-wares/smallwares/gastronorm-pan
+Disallow:/product/1429/باکس-نی-پدالی
+Disallow:/product/647
+Disallow:/product/1037/small-wares/counter-and-salon/decorative-items/Frames
+Disallow:/product/1103/small-wares/counter-and-salon/decorative-items/Frames
+Disallow:/product/1110/small-wares/counter-and-salon/decorative-items/Frames
+Disallow:/product/1111/small-wares/counter-and-salon/decorative-items/Frames
+Disallow:/product/1032/small-wares/counter-and-salon/decorative-items/Frames
+

@@ -1,0 +1,139 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 02/09/2017 10:04
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("Flaticon.eot");
+  src: url("Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("Flaticon.woff") format("woff"),
+       url("Flaticon.ttf") format("truetype"),
+       url("Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-drink-2:before { content: "\f100"; }
+.flaticon-food-15:before { content: "\f101"; }
+.flaticon-food-14:before { content: "\f102"; }
+.flaticon-food-11:before { content: "\f103"; }
+.flaticon-food-13:before { content: "\f104"; }
+.flaticon-kitchen-1:before { content: "\f105"; }
+.flaticon-kitchen-utensils:before { content: "\f106"; }
+.flaticon-barbecue:before { content: "\f107"; }
+.flaticon-food-10:before { content: "\f108"; }
+.flaticon-food-12:before { content: "\f109"; }
+.flaticon-food-9:before { content: "\f10a"; }
+.flaticon-cup-1:before { content: "\f10b"; }
+.flaticon-technology-5:before { content: "\f10c"; }
+.flaticon-barbecue-1:before { content: "\f10d"; }
+.flaticon-drink-1:before { content: "\f10e"; }
+.flaticon-drink:before { content: "\f10f"; }
+.flaticon-food-6:before { content: "\f110"; }
+.flaticon-noodles:before { content: "\f111"; }
+.flaticon-cup:before { content: "\f112"; }
+.flaticon-bottle:before { content: "\f113"; }
+.flaticon-technology-2:before { content: "\f114"; }
+.flaticon-cooking-3:before { content: "\f115"; }
+.flaticon-cooking-2:before { content: "\f116"; }
+.flaticon-food-2:before { content: "\f117"; }
+.flaticon-cart:before { content: "\f118"; }
+.flaticon-technology-4:before { content: "\f119"; }
+.flaticon-strawberry:before { content: "\f11a"; }
+.flaticon-technology-1:before { content: "\f11b"; }
+.flaticon-technology-3:before { content: "\f11c"; }
+.flaticon-kitchen:before { content: "\f11d"; }
+.flaticon-scale:before { content: "\f11e"; }
+.flaticon-food-8:before { content: "\f11f"; }
+.flaticon-cooking:before { content: "\f120"; }
+.flaticon-technology:before { content: "\f121"; }
+.flaticon-food-7:before { content: "\f122"; }
+.flaticon-restaurant:before { content: "\f123"; }
+.flaticon-cheese:before { content: "\f124"; }
+.flaticon-cooking-4:before { content: "\f125"; }
+.flaticon-food-5:before { content: "\f126"; }
+.flaticon-water:before { content: "\f127"; }
+.flaticon-food-4:before { content: "\f128"; }
+.flaticon-mixer:before { content: "\f129"; }
+.flaticon-food-3:before { content: "\f12a"; }
+.flaticon-food-1:before { content: "\f12b"; }
+.flaticon-food:before { content: "\f12c"; }
+.flaticon-fast-food:before { content: "\f12d"; }
+.flaticon-cutlery-1:before { content: "\f12e"; }
+.flaticon-coffee-cup:before { content: "\f12f"; }
+.flaticon-cutlery:before { content: "\f130"; }
+.flaticon-cooking-1:before { content: "\f131"; }
+    
+    $font-Flaticon-drink-2: "\f100";
+    $font-Flaticon-food-15: "\f101";
+    $font-Flaticon-food-14: "\f102";
+    $font-Flaticon-food-11: "\f103";
+    $font-Flaticon-food-13: "\f104";
+    $font-Flaticon-kitchen-1: "\f105";
+    $font-Flaticon-kitchen-utensils: "\f106";
+    $font-Flaticon-barbecue: "\f107";
+    $font-Flaticon-food-10: "\f108";
+    $font-Flaticon-food-12: "\f109";
+    $font-Flaticon-food-9: "\f10a";
+    $font-Flaticon-cup-1: "\f10b";
+    $font-Flaticon-technology-5: "\f10c";
+    $font-Flaticon-barbecue-1: "\f10d";
+    $font-Flaticon-drink-1: "\f10e";
+    $font-Flaticon-drink: "\f10f";
+    $font-Flaticon-food-6: "\f110";
+    $font-Flaticon-noodles: "\f111";
+    $font-Flaticon-cup: "\f112";
+    $font-Flaticon-bottle: "\f113";
+    $font-Flaticon-technology-2: "\f114";
+    $font-Flaticon-cooking-3: "\f115";
+    $font-Flaticon-cooking-2: "\f116";
+    $font-Flaticon-food-2: "\f117";
+    $font-Flaticon-cart: "\f118";
+    $font-Flaticon-technology-4: "\f119";
+    $font-Flaticon-strawberry: "\f11a";
+    $font-Flaticon-technology-1: "\f11b";
+    $font-Flaticon-technology-3: "\f11c";
+    $font-Flaticon-kitchen: "\f11d";
+    $font-Flaticon-scale: "\f11e";
+    $font-Flaticon-food-8: "\f11f";
+    $font-Flaticon-cooking: "\f120";
+    $font-Flaticon-technology: "\f121";
+    $font-Flaticon-food-7: "\f122";
+    $font-Flaticon-restaurant: "\f123";
+    $font-Flaticon-cheese: "\f124";
+    $font-Flaticon-cooking-4: "\f125";
+    $font-Flaticon-food-5: "\f126";
+    $font-Flaticon-water: "\f127";
+    $font-Flaticon-food-4: "\f128";
+    $font-Flaticon-mixer: "\f129";
+    $font-Flaticon-food-3: "\f12a";
+    $font-Flaticon-food-1: "\f12b";
+    $font-Flaticon-food: "\f12c";
+    $font-Flaticon-fast-food: "\f12d";
+    $font-Flaticon-cutlery-1: "\f12e";
+    $font-Flaticon-coffee-cup: "\f12f";
+    $font-Flaticon-cutlery: "\f130";
+    $font-Flaticon-cooking-1: "\f131";

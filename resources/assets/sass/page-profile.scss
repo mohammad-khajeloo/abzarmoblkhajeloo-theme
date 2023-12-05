@@ -1,0 +1,134 @@
+.profile {
+  padding-top: 40px;
+  text-align: center;
+  .item {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: right;
+    span {
+      color: $grey;
+      &.title {
+        color: $lightGrey1;
+        margin-left: 10px;
+      }
+    }
+    i {
+      vertical-align: middle;
+    }
+  }
+  .space {
+    hr {
+      margin: 15px 0 30px;
+    }
+  }
+  .info {
+    .icon-title {
+      text-align: right;
+      margin-bottom: 30px;
+      span {
+        font-size: 16px;
+        font-weight: 400;
+      }
+      i {
+        font-size: 18px;
+        vertical-align: middle;
+      }
+    }
+    .address {
+      text-align: right;
+      direction: rtl;
+      color: $grey;
+      font-size: 14px;
+      margin-bottom: 30px;
+      border: 1px solid $borderColor;
+      .address-header {
+        @include flex();
+        justify-content: stretch;
+        align-items: stretch;
+        background: $btnColor;
+        border-bottom: 1px solid $borderColor;
+        .address-title {
+          flex-grow: 1;
+          padding: 0 15px;
+          line-height: 50px;
+        }
+      }
+      .address-body {
+        @include flex();
+        justify-content: stretch;
+        align-items: stretch;
+        .address-content {
+          flex-grow: 1;
+          padding: 15px;
+          line-height: 32px;
+          max-width: calc(100% - 50px);
+          span:not(.numerical-data) {
+            color: $lightGrey1;
+          }
+        }
+      }
+      .address-button {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        a {
+          padding: 0;
+          text-align: center;
+          line-height: 50px;
+          color: $mainColor2;
+          display: block;
+          @include transition(all, 0.3s);
+          &:hover, &:focus {
+            color: $mainColor1;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.profile-edit {
+  padding-top: 40px;
+  text-align: center;
+  .birth-date {
+    @include flex();
+    justify-content: stretch;
+    flex-wrap: wrap;
+    .form-control {
+      width: auto;
+      flex-grow: 1;
+      margin:0;
+    }
+  }
+  .checkbox-lb {
+    margin-bottom: 50px;
+  }
+  .office-location {
+    @include flex();
+    justify-content: stretch;
+    flex-wrap: wrap;
+    .form-group {
+      width: 49%;
+      display: inline-block;
+      vertical-align: top;
+      .fstToggleBtn {
+        padding: 0 15px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        background: $lightGrey3;
+        border-color: $borderColor;
+        @include border-radius(0);
+        box-shadow: none;
+        direction: rtl;
+        text-align: right;
+      }
+    }
+  }
+  .space {
+    hr {
+      margin: 15px 0 30px;
+    }
+  }
+}

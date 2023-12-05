@@ -1,0 +1,267 @@
+#confirm-modal, #alert-modal, #added-to-cart-modal, #add-to-homeScreen-iphone-modal, #add-to-homeScreen-android-modal {
+  .modal-content {
+    @include border-radius(0);
+
+    .modal-body {
+      padding: 40px 30px 30px;
+      border-top: 3px solid $mainColor1;
+
+      .question {
+        font-size: 16px;
+        color: $grey;
+        text-align: center;
+        margin: 0;
+      }
+
+      .message {
+        font-size: 16px;
+        color: $grey;
+      }
+
+      .description {
+        margin: 0;
+        text-align: right;
+      }
+    }
+
+    .modal-footer {
+      text-align: center;
+
+      .btn {
+        font-size: 16px;
+        color: #fff;
+
+        &.submit {
+          margin: 0 5px;
+          background: $mainColor1;
+
+          &:hover {
+            background: $mainColor1;
+          }
+        }
+
+        &.cancel {
+          background: $grey99;
+
+          &:hover {
+            background: $iconGrey;
+          }
+        }
+      }
+    }
+  }
+
+  &.in {
+    @include flex();
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#rating-modal {
+  .modal-content {
+    .modal-header {
+      direction: ltr;
+      justify-content: space-between;
+
+      .close {
+        margin: -1rem;
+      }
+
+      .modal-title {
+        font-size: 18px;
+        direction: rtl;
+      }
+    }
+
+    .modal-body {
+      .desc {
+        font-size: 14px;
+        direction: rtl;
+        text-align: justify;
+      }
+
+      .rating {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 30px auto;
+        direction: ltr;
+
+        li {
+          display: inline-block;
+          margin: 0 2px;
+
+          i {
+            color: $mainColor2;
+            font-size: 30px;
+          }
+        }
+      }
+
+      textarea {
+        max-width: 100%;
+        height: auto;
+        background: $lightGrey3;
+        font-size: 14px;
+        @include border-radius(3px);
+
+        &:focus {
+          box-shadow: none;
+          border-color: $mainColor1;
+        }
+      }
+    }
+
+    .modal-footer {
+      .btn.submit {
+        background: $mainColor1;
+        color: #fff;
+        margin: 0;
+
+        &:hover {
+          background: $mainColor1;
+        }
+      }
+    }
+  }
+}
+
+#location-modal {
+  .modal-content {
+    .modal-header {
+      direction: ltr;
+      justify-content: space-between;
+
+      .close {
+        margin: -1rem;
+      }
+
+      .modal-title {
+        font-size: 18px;
+        direction: rtl;
+      }
+    }
+
+    .modal-body {
+      .office-location {
+        @include flex();
+        justify-content: stretch;
+        .col {
+          flex-grow: 1;
+          width: 50%;
+          padding: 0;
+        }
+        .fstToggleBtn {
+          height: 48px;
+          padding: 0 15px;
+          line-height: 50px;
+        }
+      }
+    }
+
+    .modal-footer {
+      .btn.submit {
+        background: $mainColor1;
+        color: #000;
+        margin: 0;
+
+        &:hover {
+          background: $mainColor1Medium;
+        }
+      }
+    }
+  }
+}
+#addresses-modal {
+  .modal-content {
+    .modal-header {
+      direction: ltr;
+      justify-content: space-between;
+
+      .close {
+        margin: -1rem;
+      }
+
+      .modal-title {
+        font-size: 18px;
+        direction: rtl;
+      }
+    }
+
+    .modal-body {
+      .address-item {
+        font-size: 14px;
+        padding: 15px 0;
+        border-bottom: 1px solid $borderColorLight;
+        cursor: pointer;
+        .form-group{
+          margin:0;
+        }
+        .radiobtn{
+          padding-right: 25px;
+        }
+      }
+      .add-address{
+        font-size:16px;
+        display: block;
+        padding:15px 0;
+        line-height: 30px;
+        i{
+          vertical-align: middle;
+          line-height: 30px;
+        }
+        &:hover{
+          color:$mainColor2;
+        }
+      }
+    }
+
+    .modal-footer {
+      .btn.submit {
+        background: $mainColor1;
+        color: #fff;
+        margin: 0;
+
+        &:hover {
+          background: $mainColor1Medium;
+        }
+      }
+    }
+  }
+}
+
+#add-to-homeScreen-iphone-modal, #add-to-homeScreen-android-modal {
+  top: 60px;
+
+  .modal-footer {
+    text-align: center;
+    display: block;
+    .btn {
+      &.submit {
+        background:  #7dcd73 !important;
+
+        &:hover {
+          background:  #7dcd73 !important;
+        }
+      }
+    }
+  }
+
+  .modal-body {
+    .question {
+      i {
+        padding: 5px 10px;
+        background-color: #cccccc;
+      }
+    }
+  }
+
+  .modal-header {
+    button {
+      margin-left: 0;
+      padding: 20px 0 0 0;
+    }
+  }
+}
