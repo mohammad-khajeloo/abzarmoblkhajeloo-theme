@@ -341,10 +341,13 @@
     </div>
 </script>
 
+{{--<script type="text/template" id="local-cart-type-limit-error">--}}
+{{--    <p class="title-count-limit">سقف محدودیت خرید <%- count_limit_basket %> نوع کالا است.</p><br><p><i--}}
+{{--                class="fa fa-warning" style="color: #ff8226"></i> در صورت تمایل به ثبت کالای بیشتر لطفا پس تکمیل این--}}
+{{--        خرید سفارش جدید ایجاد نمایید.</p>--}}
+{{--</script>--}}
 <script type="text/template" id="local-cart-type-limit-error">
-    <p class="title-count-limit">سقف محدودیت خرید <%- count_limit_basket %> نوع کالا است.</p><br><p><i
-                class="fa fa-warning" style="color: #ff8226"></i> در صورت تمایل به ثبت کالای بیشتر لطفا پس تکمیل این
-        خرید سفارش جدید ایجاد نمایید.</p>
+    <p class="title-count-limit"><%- count_limit_basket %></p>
 </script>
 
 <script type="text/template" id="printable-invoice-row">
